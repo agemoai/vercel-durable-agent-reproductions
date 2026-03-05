@@ -22,3 +22,17 @@ we have solved this internally by serializing the mcp tools without the implemen
 list into the workflow 
 
 then havinng a single step that handles all of the mcp calls. 
+
+
+```
+⨯ Error [WorkflowRuntimeError]: Failed to serialize workflow arguments at path "[1].searchFlights.inputSchema". Ensure you're passing serializable types (plain objects, arrays, primitives, Date, RegExp, Map, Set).
+
+Learn more: https://useworkflow.dev/err/serialization-failed
+    at ignore-listed frames {
+  [cause]: Error [DevalueError]: Cannot stringify arbitrary non-POJOs
+      at ignore-listed frames {
+    path: '[1].searchFlights.inputSchema',
+    value: ZodObject {
+      toJSONSchema: [Function (anonymous)],
+      def: [Object],
+```
